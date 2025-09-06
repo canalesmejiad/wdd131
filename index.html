@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WDD 131 - Dynamic Web Fundamentals - David Canales</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – David Canales</title>
     <meta name="description"
-        content="WDD 131 - Dynamic Web Fundamentals course project by David Canales. Learning and practicing HTML, CSS, and JavaScript through dynamic web development projects.">
+        content="WDD 131 – Dynamic Web Fundamentals course project by David Canales. Learning and practicing HTML, CSS, and JavaScript through dynamic web development projects.">
     <meta name="author" content="David Canales">
+
     <script src="getdates.js" defer></script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,49 +25,48 @@
 
 <body>
     <header>
-        <h1><span id="course-tittle">WDD 131 - Dynamic Web Fundamentals</span></h1>
+        <h1><span id="course-title">WDD 131 – Dynamic Web Fundamentals</span></h1>
         <p>David Canales</p>
 
         <nav>
             <ul>
-                <li><a href="https://www.linkedin.com/in/david-canales-a9a091358/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.linkedin.com/in/david-canales-a9a091358/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
                 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
-                        target="_blank">Favorite Scripture</a></li>
+                        target="_blank" rel="noopener noreferrer">Favorite Scripture</a></li>
                 <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!--Your name as main heading-->
         <h1>David Canales</h1>
 
-        <!--Card 1-->
         <section class="card">
             <h2>About Me</h2>
             <p>Hello! My name is David Canales. I live in Vancouver, Washington, and I am currently studying Web
-                Development at BYU-Idaho.
-                I enjoy learning HTML, CSS, and Python to build creative and useful projects.
+                Development at BYU-Idaho. I enjoy learning HTML, CSS, and Python to build creative and useful projects.
                 In my free time, I like exploring technology, cars, and outdoor activities.</p>
-            <img src="images/profile.png" alt="Profile picture">
+            <img src="images/profile.png" alt="Portrait photo of David Canales">
 
             <h3>Vancouver, Washington</h3>
             <p>Vancouver is located in the state of Washington, right across the Columbia River from Portland, Oregon.
                 It is known for its beautiful nature, access to the Columbia Gorge, and a mix of city and outdoor
                 lifestyles.</p>
-            <img src="images/vancouver_flag.jpg" alt="Flag of Washington State">
+            <img src="images/vancouver_flag.jpg" alt="Flag representing Vancouver, Washington">
         </section>
 
         <section class="card">
             <h2>Web Dev Resources</h2>
             <ul>
-                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
-                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
-                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
-                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
-                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
-                <li><a href="https://placehold.co/" target="_blank">Image Placeholder</a></li>
+                <li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Smashing
+                        Magazine</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a></li>
+                <li><a href="https://placehold.co/" target="_blank" rel="noopener noreferrer">Image Placeholder</a></li>
             </ul>
         </section>
     </main>
@@ -75,13 +76,7 @@
         <p id="lastModified"></p>
     </footer>
 
-    <script>
-        // Insert current year 
-        document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-        // Insert last modified year 
-        document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;
-    </script>
+    <!-- Elimina el script inline; ya usas getdates.js con defer -->
 </body>
 
 </html>
