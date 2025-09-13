@@ -1,51 +1,42 @@
+/* Este archivo se carga DESPUÉS de temple.css y solo contiene overrides. */
+
 @media (min-width: 900px) {
 
-    /* Widen header content and align nav to the right */
+    /* Header: título a la izquierda, nav a la derecha */
     header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding-block: 1rem;
+    }
+
+    header nav {
+        margin-top: 0;
+        gap: 1rem;
+        justify-content: flex-end;
+        /* alinear a la derecha en grande */
     }
 
     header h1 {
         font-size: 1.8rem;
     }
 
-    header nav {
-        gap: 1rem;
-    }
-
-    /* Grid gallery: 3 columns like the example */
+    /* Main: grid responsivo (3 columnas como en el ejemplo) */
     main {
-        padding-block: 2rem 3rem;
-    }
-
-    /* Turn the group of figures into a grid by targeting figures as children of main */
-    main {
-        display: grid;
+        max-width: var(--maxw);
+        /* permite más ancho en desktop */
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 2rem 2rem;
-        align-items: start;
+        gap: 2rem;
     }
 
-    /* Keep the section title spanning full width */
     main>h1 {
         grid-column: 1 / -1;
+        /* que el título abarque el ancho completo */
         font-size: 2rem;
         margin-bottom: .5rem;
     }
 
-    figure {
-        margin: 0;
-        /* grid handles spacing */
-        max-width: none;
-        /* let it fill the grid cell */
-    }
-
     figcaption {
         font-weight: 600;
-    }
-
-    footer {
-        border-radius: 0;
-        font-size: 1rem;
     }
 }
