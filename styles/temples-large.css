@@ -1,6 +1,6 @@
 @media (min-width: 900px) {
     .menu-btn {
-        display: none;
+        display: none
     }
 
     .site-header {
@@ -11,7 +11,7 @@
     }
 
     .brand {
-        font-size: 1.8rem;
+        font-size: 1.8rem
     }
 
     .nav {
@@ -25,7 +25,7 @@
     }
 
     .nav a {
-        padding: .5rem .75rem;
+        padding: .5rem .75rem
     }
 
     main {
@@ -48,14 +48,14 @@
     }
 
     figure {
-        margin: 0;
+        margin: 0
     }
 
     figcaption {
-        font-weight: 700;
+        font-weight: 700
     }
 
     footer {
-        font-size: 1rem;
+        font-size: 1rem
     }
 }

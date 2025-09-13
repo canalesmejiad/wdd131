@@ -71,7 +71,7 @@ header {
 }
 
 .menu-btn:focus-visible {
-    outline: 3px solid #ffd166;
+    outline: 3px solid #ffd166
 }
 
 .nav {
@@ -93,7 +93,6 @@ header {
     display: flex
 }
 
-nav a,
 .nav a {
     color: var(--brand-ink);
     text-decoration: none;
@@ -105,9 +104,9 @@ nav a,
     text-align: center;
 }
 
-nav a:hover,
-nav a:focus,
-nav a:focus-visible {
+.nav a:hover,
+.nav a:focus,
+.nav a:focus-visible {
     background: #ffffff;
     color: var(--brand);
     transform: translateY(-1px);
@@ -142,10 +141,13 @@ figure {
 
 figure img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 220px;
+    /* altura uniforme */
+    object-fit: cover;
+    /* recorta sobrante sin deformar */
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    display: block;
 }
 
 figcaption {
