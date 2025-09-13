@@ -1,42 +1,61 @@
-/* Este archivo se carga DESPUÉS de temple.css y solo contiene overrides. */
-
 @media (min-width: 900px) {
+    .menu-btn {
+        display: none;
+    }
 
-    /* Header: título a la izquierda, nav a la derecha */
-    header {
+    .site-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding-block: 1rem;
     }
 
-    header nav {
-        margin-top: 0;
-        gap: 1rem;
-        justify-content: flex-end;
-        /* alinear a la derecha en grande */
-    }
-
-    header h1 {
+    .brand {
         font-size: 1.8rem;
     }
 
-    /* Main: grid responsivo (3 columnas como en el ejemplo) */
+    .nav {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .nav a {
+        padding: .5rem .75rem;
+    }
+
     main {
-        max-width: var(--maxw);
-        /* permite más ancho en desktop */
+        max-width: 1100px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 2rem;
+        padding-block: 2rem 3rem;
     }
 
     main>h1 {
         grid-column: 1 / -1;
-        /* que el título abarque el ancho completo */
         font-size: 2rem;
         margin-bottom: .5rem;
     }
 
+    main>h2 {
+        grid-column: 1 / -1;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    figure {
+        margin: 0;
+    }
+
     figcaption {
-        font-weight: 600;
+        font-weight: 700;
+    }
+
+    footer {
+        font-size: 1rem;
     }
 }
