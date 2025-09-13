@@ -19,9 +19,14 @@
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <div class="brand">Temple Album</div>
-        <nav>
+
+        <!-- Botón hamburger: solo visible en móvil -->
+        <button id="menuBtn" class="menu-btn" aria-controls="primaryNav" aria-expanded="false"
+            aria-label="Open menu">☰</button>
+
+        <nav id="primaryNav" class="nav">
             <a href="#">Home</a>
             <a href="#">Old</a>
             <a href="#">New</a>
