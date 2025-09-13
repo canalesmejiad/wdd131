@@ -1,0 +1,130 @@
+/* ========== Design tokens ========== */
+:root {
+    --brand: #4b0f82;
+    /* header bar */
+    --brand-ink: #ffffff;
+    /* header text */
+    --accent: #6a1fb7;
+    /* captions/links */
+    --bg: #fafafa;
+    --ink: #222;
+    --muted: #6b7280;
+    --radius: 14px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    --maxw: 1100px;
+}
+
+/* ========== Base ========== */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+}
+
+/* Page container spacing */
+header,
+main,
+footer {
+    width: min(100%, var(--maxw));
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+/* ========== Header ========== */
+header {
+    background: var(--brand);
+    color: var(--brand-ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: .9rem;
+    border-bottom: 3px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .3px;
+    margin: 0;
+}
+
+/* Mobile: keep nav simple/stacked under the title (or hide if you prefer) */
+header nav {
+    display: flex;
+    gap: .75rem;
+}
+
+header nav a {
+    color: var(--brand-ink);
+    text-decoration: none;
+    padding: .35rem .5rem;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+header nav a:hover,
+header nav a:focus {
+    background: rgba(255, 255, 255, .15);
+    outline: none;
+}
+
+/* ========== Main / Gallery ========== */
+main {
+    padding-block: 1.25rem 2rem;
+}
+
+main>h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: .25rem 0 1.25rem;
+}
+
+/* Figures (one column on mobile) */
+figure {
+    margin: 1.25rem auto;
+    max-width: 680px;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+figcaption {
+    margin-top: .6rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ========== Footer ========== */
+footer {
+    background: var(--brand);
+    color: var(--brand-ink);
+    text-align: center;
+    padding: 1rem;
+    border-top: 3px solid rgba(255, 255, 255, .08);
+    margin-top: 2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+footer p {
+    margin: .2rem 0;
+    font-size: .95rem;
+}

@@ -1,0 +1,51 @@
+@media (min-width: 900px) {
+
+    /* Widen header content and align nav to the right */
+    header {
+        padding-block: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav {
+        gap: 1rem;
+    }
+
+    /* Grid gallery: 3 columns like the example */
+    main {
+        padding-block: 2rem 3rem;
+    }
+
+    /* Turn the group of figures into a grid by targeting figures as children of main */
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem 2rem;
+        align-items: start;
+    }
+
+    /* Keep the section title spanning full width */
+    main>h1 {
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+
+    figure {
+        margin: 0;
+        /* grid handles spacing */
+        max-width: none;
+        /* let it fill the grid cell */
+    }
+
+    figcaption {
+        font-weight: 600;
+    }
+
+    footer {
+        border-radius: 0;
+        font-size: 1rem;
+    }
+}
