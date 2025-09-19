@@ -1,0 +1,160 @@
+/* ------------------------------
+   Global tokens (Honduras scheme)
+   ------------------------------ */
+:root {
+    --bg: #ffffff;
+    --ink: #0f172a;
+    --muted: #475569;
+
+    /* Honduras flag blues + white */
+    --brand: #1d4ed8;
+    /* blue */
+    --brand-2: #0ea5e9;
+    /* light aqua accent */
+    --surface: #f5f7fb;
+
+    --radius: 14px;
+    --max: 1100px;
+    --gap: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ------------------------------
+     Header / Footer
+     ------------------------------ */
+header,
+footer {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, var(--brand), var(--brand-2));
+    padding: 1rem 1.25rem;
+}
+
+header .tagline {
+    margin: .25rem 0 0;
+    color: #eaf2ff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ------------------------------
+     Main layout
+     ------------------------------ */
+main {
+    max-width: var(--max);
+    margin-inline: auto;
+    padding: 1rem;
+    display: grid;
+    gap: 1.25rem;
+    /* móvil: bloques apilados */
+}
+
+/* ------------------------------
+     Hero blocks (two images)
+     ------------------------------ */
+.hero {
+    background: var(--surface);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    padding: .75rem;
+}
+
+.hero picture,
+.hero img {
+    width: 100%;
+    border-radius: calc(var(--radius) - 4px);
+}
+
+.caption {
+    margin: .6rem 0 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: .95rem;
+}
+
+/* ------------------------------
+     Content sections
+     ------------------------------ */
+.section h2 {
+    margin: .2rem 0 .5rem;
+}
+
+.section p,
+.section li,
+.section dd {
+    color: var(--muted);
+}
+
+.section ul {
+    margin: .25rem 0 0 1.25rem;
+}
+
+/* Weather block base */
+.weather {
+    background: var(--surface);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+.mobile-icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.desktop-icon {
+    display: none;
+}
+
+/* si quedó el span del emoji en tu HTML, lo ocultamos */
+
+/* ------------------------------
+     Media query (wide view ≥ 900px)
+     ------------------------------ */
+@media (min-width: 900px) {
+
+    /* Dos columnas para igualar el wireframe */
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* Weather: ocultar SVG móvil y añadir icono con pseudo-elemento */
+    .mobile-icon {
+        display: none;
+    }
+
+    /* Requisito: pseudo-elemento después del heading "Weather" */
+    .weather h2::after {
+        content: " ☁️";
+        /* puedes cambiar por "🌤️" "🌧️" etc. */
+        font-size: 1.6rem;
+        margin-left: .35rem;
+        vertical-align: middle;
+    }
+}
