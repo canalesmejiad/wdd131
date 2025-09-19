@@ -4,15 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Honduras • Place Page</title>
-
-    <!-- CSS -->
+    <title>Honduras • Copán</title>
     <link rel="stylesheet" href="styles/place.css" />
-
-    <!-- JS (defer as required) -->
     <script defer src="scripts/place.js"></script>
-
-    <!-- Optional font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -21,70 +15,85 @@
 <body>
     <header>
         <h1>Honduras</h1>
-        <p class="tagline">Mountains, Mayan ruins, and Caribbean blues</p>
     </header>
 
     <main>
-        <!-- =========================
-         HERO 1 – Guacamaya (WebP)
-         ========================= -->
-        <section class="hero" aria-labelledby="hero-macaw-title">
-            <h2 id="hero-macaw-title" class="visually-hidden">Scarlet Macaw</h2>
-
-            <!-- WebP source + fallback -->
+        <section class="hero" aria-labelledby="hero-title">
+            <h2 id="hero-title">Copán</h2>
             <picture>
-                <source type="image/webp" srcset="images_temple/guacamaya_hn.webp" media="(min-width: 600px)">
-                <img src="images_temple/guacamaya_hn.webp" alt="Scarlet Macaw, national bird of Honduras" width="554"
-                    height="554" loading="eager">
-            </picture>
-
-            <p class="caption">Scarlet Macaw (Guacamaya Roja)</p>
-        </section>
-
-        <!-- =========================
-         HERO 2 – Copán (WebP)
-         ========================= -->
-        <section class="hero" aria-labelledby="hero-copan-title">
-            <h2 id="hero-copan-title" class="visually-hidden">Copán Ruins</h2>
-
-            <!-- Prefer WebP; fallback JPEG -->
-            <picture>
-                <source type="image/webp" srcset="images_temple/copan_hn.jpg">
                 <img src="images_temple/copan_hn.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1152"
-                    height="768" loading="lazy">
+                    height="768" loading="eager">
             </picture>
-
-            <p class="caption">Copán Ruins</p>
         </section>
 
-        <!-- =========================
-         ABOUT
-         ========================= -->
-        <section class="section" id="about" aria-labelledby="about-title">
-            <h2 id="about-title">About Honduras</h2>
-            <p>
-                Honduras is a Central American country known for the ancient Mayan city of
-                <strong>Copán</strong>, the cloud forests of <strong>La Tigra</strong>, and the
-                world-class reefs of the <strong>Bay Islands</strong> (Roatán, Utila, Guanaja).
-                Spanish is the official language and the currency is the <em>Lempira (HNL)</em>.
-            </p>
+        <section class="card data" aria-labelledby="data-title">
+            <div class="card-head">
+                <h2 id="data-title">Data</h2>
+            </div>
+            <dl class="facts">
+                <div>
+                    <dt>Area:</dt>
+                    <dd>112,492 km²</dd>
+                </div>
+                <div>
+                    <dt>Population:</dt>
+                    <dd>~10 million</dd>
+                </div>
+                <div>
+                    <dt>Capital:</dt>
+                    <dd>Tegucigalpa</dd>
+                </div>
+                <div>
+                    <dt>Languages:</dt>
+                    <dd>Spanish; Garífuna & indigenous</dd>
+                </div>
+                <div>
+                    <dt>Currency:</dt>
+                    <dd>Lempira (HNL)</dd>
+                </div>
+                <div>
+                    <dt>Time Zone:</dt>
+                    <dd>UTC−6</dd>
+                </div>
+                <div>
+                    <dt>Calling Code:</dt>
+                    <dd>+504</dd>
+                </div>
+                <div>
+                    <dt>Internet TLD:</dt>
+                    <dd>.hn</dd>
+                </div>
+            </dl>
         </section>
 
-        <!-- =========================
-         WEATHER (Step 3 assets)
-         ========================= -->
-        <section class="section weather" aria-labelledby="weather-title">
-            <h2 id="weather-title">
-                Weather <span class="desktop-icon" aria-hidden="true">☁️</span>
-            </h2>
-            <!-- Mobile SVG icon (PNG por ahora) -->
+        <section class="card weather" aria-labelledby="weather-title">
+            <div class="card-head">
+                <h2 id="weather-title">Weather</h2>
+            </div>
             <img class="mobile-icon" src="images_temple/weather_icon.png" alt="Weather icon" width="40" height="40">
-            <p class="weather-now">Currently: Sunny, 28&nbsp;°C</p>
+            <dl class="wx">
+                <div>
+                    <dt>Temperature:</dt>
+                    <dd><span id="tempC">28</span> °C</dd>
+                </div>
+                <div>
+                    <dt>Conditions:</dt>
+                    <dd>Sunny</dd>
+                </div>
+                <div>
+                    <dt>Wind:</dt>
+                    <dd><span id="windK">12</span> km/h</dd>
+                </div>
+                <div>
+                    <dt>Wind Chill:</dt>
+                    <dd><span id="wc">N/A</span></dd>
+                </div>
+            </dl>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | Honduras Place Page</p>
+        <p>&copy; <span id="year"></span> | Honduras — Copán</p>
         <p id="lastModified"></p>
     </footer>
 </body>

@@ -1,24 +1,16 @@
-/* ==============================
-   Colores Honduras + tokens
-   ============================== */
 :root {
     --blue: #0b57d0;
-    /* azul bandera */
     --blue-dark: #003e7e;
-    /* azul profundo */
     --stripe: #11b6f2;
-    /* franja/acento */
+    --card: #ffffff;
     --bg: #eef6ff;
-    /* fondo suave */
     --ink: #0f172a;
     --muted: #475569;
-    --card: #ffffff;
     --radius: 14px;
-    --shadow: 0 10px 24px rgba(16, 24, 40, .08);
+    --shadow: 0 10px 24px rgba(16, 24, 40, .10);
     --max: 1100px;
 }
 
-/* Base */
 * {
     box-sizing: border-box
 }
@@ -30,9 +22,9 @@ body {
 
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color: var(--ink);
+    font-family: 'Inter', system-ui, Segoe UI, Roboto, Arial, sans-serif;
     background: var(--bg);
+    color: var(--ink);
     line-height: 1.6;
 }
 
@@ -42,56 +34,43 @@ img {
     display: block
 }
 
-/* Header + footer */
 header,
 footer {
     text-align: center;
     color: #fff;
-    background: linear-gradient(180deg, var(--blue) 0%, var(--blue-dark) 100%);
+    background: linear-gradient(180deg, var(--blue), var(--blue-dark));
     padding: 1rem 1.25rem;
 }
 
 header h1 {
-    margin: .2rem 0
-}
-
-header .tagline {
-    margin: 0;
-    color: #e8f1ff
-}
-
-footer p {
     margin: .3rem 0
 }
 
-/* Contenedor principal */
-main {
-    max-width: var(--max);
-    margin-inline: auto;
-    padding: 1rem;
-    display: grid;
-    gap: 1.25rem;
+footer p {
+    margin: .25rem 0
 }
 
-/* ======================================================
-     Tarjeta-hero (móvil): título franja + imagen + caption
-     ====================================================== */
+main {
+    max-width: var(--max);
+    margin: 1rem auto 2rem;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
 .hero {
     background: var(--card);
     border-radius: var(--radius);
-    box-shadow: var(--shadow);
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .hero h2 {
-    /* franja superior como el wireframe */
     margin: 0;
     padding: .75rem 1rem;
-    background: var(--blue);
-    color: #fff;
     text-align: center;
-    font-size: 1.15rem;
-    font-weight: 700;
+    color: #fff;
+    background: var(--blue);
     position: relative;
 }
 
@@ -103,147 +82,105 @@ main {
     bottom: -6px;
     height: 6px;
     background: var(--stripe);
-    /* franja delgada bajo el título */
-}
-
-.hero picture {
-    display: block
 }
 
 .hero img {
-    width: 100%;
-    height: auto
+    width: 100%
 }
 
-.caption {
-    margin: .75rem auto 1rem;
-    text-align: center;
-    color: var(--muted);
-    padding: 0 1rem 1rem;
-}
-
-/* Secciones */
-.section {
+.card {
     background: var(--card);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 1rem 1.25rem;
 }
 
-.section h2 {
-    margin: .25rem 0 1rem;
-    text-align: center;
-    border-bottom: 3px solid var(--stripe);
-    padding-bottom: .5rem;
+.card-head {
+    background: var(--blue);
+    color: #fff;
+    padding: .5rem .75rem;
+    border-radius: 10px;
+    width: max-content;
+    margin: -1rem 0 .75rem -1rem;
 }
 
-#about p {
-    margin: .25rem 0;
+.card-head h2 {
+    margin: 0;
+    font-size: 1.05rem
+}
+
+.facts,
+.wx {
+    margin: 0
+}
+
+.facts>div,
+.wx>div {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: .5rem;
+    padding: .25rem 0;
+    align-items: baseline;
+}
+
+dt {
+    font-weight: 600;
+    color: var(--ink)
+}
+
+dd {
+    margin: 0;
     color: var(--muted)
-}
-
-/* Weather (móvil: bloque vertical centrado) */
-.weather {
-    text-align: center;
 }
 
 .weather .mobile-icon {
     width: 48px;
     height: 48px;
-    margin: .35rem auto .25rem
+    margin: .25rem 0 .25rem;
 }
 
-.weather .weather-now {
-    margin: .25rem 0 .75rem
-}
-
-.weather h2 {
-    position: relative;
-}
-
-/* desktop: el icono se añade con ::after, en móvil lo quitamos */
-.weather h2::after {
-    content: ""
-}
-
-/* tipografía de datos */
-.weather p {
-    margin: .25rem 0
-}
-
-/* =========================
-     Vista ancha (banner + overlays)
-     ========================= */
 @media (min-width:900px) {
-
     main {
         grid-template-columns: 1fr 1fr;
         gap: 1.25rem;
     }
 
-    /* El primer hero se vuelve banner de ancho completo */
-    .hero:first-of-type {
-        grid-column: 1 / -1;
-        padding: 0;
+    .hero {
+        grid-column: 1/-1
     }
 
-    .hero:first-of-type h2 {
-        text-align: center;
-        font-size: 1.35rem;
-    }
-
-    .hero:first-of-type picture {
-        display: block
-    }
-
-    .hero:first-of-type img {
-        width: 100%;
+    .hero img {
         height: 420px;
-        /* proporción “hero” */
-        object-fit: cover;
+        object-fit: cover
     }
 
-    .hero:first-of-type .caption {
-        display: none
-    }
-
-    /* como el wireframe */
-
-    /* Tarjeta “About” a la izquierda, superpuesta sobre el hero */
-    #about {
-        grid-column: 1 / 2;
-        max-width: 320px;
+    .data {
+        grid-column: 1/2;
+        max-width: 360px;
         justify-self: start;
         margin-top: -120px;
-        /* sube sobre la imagen */
         z-index: 2;
+        background: rgba(255, 255, 255, .96);
+        backdrop-filter: saturate(1.1);
     }
 
-    /* Tarjeta weather a la derecha, superpuesta */
     .weather {
-        grid-column: 2 / 3;
-        max-width: 280px;
+        grid-column: 2/3;
+        max-width: 320px;
         justify-self: end;
         margin-top: -120px;
         z-index: 2;
+        background: rgba(255, 255, 255, .96);
+        backdrop-filter: saturate(1.1);
     }
 
-    /* En desktop, eliminamos el SVG móvil y usamos pseudo-elemento */
     .weather .mobile-icon {
         display: none
     }
 
-    .weather h2::after {
+    .weather .card-head h2::after {
         content: " ⛅";
-        /* escoge “☀️”, “🌧️”, “☁️” si prefieres */
-        font-size: 1.4rem;
         margin-left: .35rem;
-        vertical-align: middle;
-        color: #ffcc4d;
-        /* tono soleado */
+        font-size: 1.2rem;
     }
-
-    /* Si quieres ocultar el segundo hero en la vista ancha
-       descomenta la línea de abajo para igualar más el wireframe */
-    /* .hero:nth-of-type(2){ display:none; } */
 }
