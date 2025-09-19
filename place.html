@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Honduras • Place Page</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/place.css" />
+
+    <!-- JS (defer as required) -->
     <script defer src="scripts/place.js"></script>
 
+    <!-- Optional font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -21,31 +25,41 @@
     </header>
 
     <main>
-        <!-- HERO 1 – Guacamaya -->
+        <!-- =========================
+         HERO 1 – Guacamaya (WebP)
+         ========================= -->
         <section class="hero" aria-labelledby="hero-macaw-title">
-            <h2 id="hero-macaw-title">Scarlet Macaw</h2>
+            <h2 id="hero-macaw-title" class="visually-hidden">Scarlet Macaw</h2>
+
+            <!-- WebP source + fallback -->
             <picture>
-                <!-- WebP -->
-                <source type="image/webp" srcset="images_temples/guacamaya_hn.webp">
-                <!-- Fallback (si algún navegador no soporta webp, puedes usar .jpeg/.jpg si la tienes) -->
+                <source type="image/webp" srcset="images_temple/guacamaya_hn.webp" media="(min-width: 600px)">
                 <img src="images_temple/guacamaya_hn.webp" alt="Scarlet Macaw, national bird of Honduras" width="554"
                     height="554" loading="eager">
             </picture>
+
             <p class="caption">Scarlet Macaw (Guacamaya Roja)</p>
         </section>
 
-        <!-- HERO 2 – Copán -->
+        <!-- =========================
+         HERO 2 – Copán (WebP)
+         ========================= -->
         <section class="hero" aria-labelledby="hero-copan-title">
-            <h2 id="hero-copan-title">Copán Ruins</h2>
+            <h2 id="hero-copan-title" class="visually-hidden">Copán Ruins</h2>
+
+            <!-- Prefer WebP; fallback JPEG -->
             <picture>
-                <source type="image/webp" srcset="images_temples/copan_hn.webp">
-                <img src="images_temple/copan_hn.jpeg" alt="Mayan ruins at Copán, Honduras at sunset" width="1152"
+                <source type="image/webp" srcset="images_temple/copan_hn.jpg">
+                <img src="images_temple/copan_hn.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1152"
                     height="768" loading="lazy">
             </picture>
+
             <p class="caption">Copán Ruins</p>
         </section>
 
-        <!-- ABOUT -->
+        <!-- =========================
+         ABOUT
+         ========================= -->
         <section class="section" id="about" aria-labelledby="about-title">
             <h2 id="about-title">About Honduras</h2>
             <p>
@@ -56,13 +70,16 @@
             </p>
         </section>
 
-        <!-- WEATHER -->
+        <!-- =========================
+         WEATHER (Step 3 assets)
+         ========================= -->
         <section class="section weather" aria-labelledby="weather-title">
-            <h2 id="weather-title">Weather</h2>
-            <!-- Mobile: SVG -->
-            <img class="mobile-icon" src="images_temple/weather.svg" alt="Weather icon" width="40" height="40">
+            <h2 id="weather-title">
+                Weather <span class="desktop-icon" aria-hidden="true">☁️</span>
+            </h2>
+            <!-- Mobile SVG icon (PNG por ahora) -->
+            <img class="mobile-icon" src="images_temple/weather_icon.png" alt="Weather icon" width="40" height="40">
             <p class="weather-now">Currently: Sunny, 28&nbsp;°C</p>
-            <!-- El pseudo-elemento ::after para el icono en desktop lo agrega el CSS -->
         </section>
     </main>
 
