@@ -3,13 +3,19 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Honduras • Copán</title>
+    <meta name="description"
+        content="Honduras • Copán — Información clave y clima en un diseño responsive. Página de práctica de WDD131." />
+    <meta name="author" content="David Canales" />
+
     <link rel="stylesheet" href="styles/place.css" />
     <script defer src="scripts/place.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -18,14 +24,17 @@
     </header>
 
     <main>
+        <!-- Hero único: Copán -->
         <section class="hero" aria-labelledby="hero-title">
             <h2 id="hero-title">Copán</h2>
             <picture>
                 <img src="images_temple/copan_hn.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1152"
-                    height="768" loading="eager">
+                    height="768" loading="eager"
+                    style="aspect-ratio:1152/768;object-fit:cover;width:100%;height:auto;" />
             </picture>
         </section>
 
+        <!-- Tarjeta: Data -->
         <section class="card data" aria-labelledby="data-title">
             <div class="card-head">
                 <h2 id="data-title">Data</h2>
@@ -66,11 +75,12 @@
             </dl>
         </section>
 
+        <!-- Tarjeta: Weather -->
         <section class="card weather" aria-labelledby="weather-title">
             <div class="card-head">
                 <h2 id="weather-title">Weather</h2>
             </div>
-            <img class="mobile-icon" src="images_temple/weather_icon.png" alt="Weather icon" width="40" height="40">
+            <img class="mobile-icon" src="images_temple/weather_icon.png" alt="Weather icon" width="40" height="40" />
             <dl class="wx">
                 <div>
                     <dt>Temperature:</dt>
