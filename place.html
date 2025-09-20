@@ -9,7 +9,6 @@
         content="Discover the ancient Mayan ruins of Copán in Honduras, with key data and weather.">
     <meta name="author" content="David Canales">
     <link rel="stylesheet" href="styles/place.css">
-    <script defer src="scripts/place.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -23,7 +22,12 @@
     <main>
         <section class="hero">
             <h2>Copán Ruins</h2>
-            <img src="images_temple/copan.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1200" height="800">
+            <picture>
+                <source srcset="images_temple/copan.webp" type="image/webp" sizes="100vw">
+                <source srcset="images_temple/copan.jpg" type="image/jpeg" sizes="100vw">
+                <img src="images_temple/copan.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1200"
+                    height="800">
+            </picture>
             <p>Copán is a renowned Maya archaeological site in western Honduras.</p>
         </section>
 
@@ -35,14 +39,14 @@
                 <li><strong>Capital:</strong> Tegucigalpa</li>
                 <li><strong>Language:</strong> Spanish</li>
                 <li><strong>Currency:</strong> Lempira (HNL)</li>
-                <li><strong>Time Zone:</strong> UTC -6</li>
+                <li><strong>Time Zone:</strong> UTC −6</li>
                 <li><strong>Calling Code:</strong> +504</li>
                 <li><strong>Internet TLD:</strong> .hn</li>
             </ul>
         </section>
 
         <section class="section weather">
-            <h2>Weather <span class="desktop-icon" aria-hidden="true">☁️</span></h2>
+            <h2>Weather <span class="desktop-icon" aria-hidden="true">☀️</span></h2>
             <img class="mobile-icon" src="images_temple/weather_icon.svg" alt="Weather icon" width="48" height="48">
             <p><strong>Temperature:</strong> 28 °C</p>
             <p><strong>Conditions:</strong> Sunny</p>
@@ -52,8 +56,8 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | 🌴 David Canales 🌴</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="year">2025</span> | 🌴 David Canales 🌴</p>
+        <p id="lastModified">Last Modified: <span>—</span></p>
     </footer>
 </body>
 
