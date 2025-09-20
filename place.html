@@ -17,18 +17,22 @@
 
 <body>
     <header>
-        <h1>Honduras ⚪️ Copan </h1>
+        <h1>Honduras • Copán</h1>
     </header>
 
     <main>
         <section class="hero">
             <picture>
-                <source
-                    srcset="images_temple/copan_hn_1200.jpg 1200w, images_temple/copan_hn_800.jpg 800w, images_temple/copan_hn_400.jpg 400w"
-                    sizes="(min-width: 900px) 1100px, 100vw">
-                <img src="images_temple/copan_hn_800.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1200"
-                    height="800" decoding="async"
-                    style="width:100%;height:auto;object-fit:cover;aspect-ratio:1200/800;">
+                <source srcset="
+            images_temple/copan_hn_2200.jpg 2200w,
+            images_temple/copan_hn_1600.jpg 1600w,
+            images_temple/copan_hn_1200.jpg 1200w,
+            images_temple/copan_hn_800.jpg 800w,
+            images_temple/copan_hn_400.jpg 400w
+          " sizes="(min-width: 900px) 1100px, 100vw">
+                <img src="images_temple/copan_hn_1200.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="2200"
+                    height="1467" loading="eager" decoding="async" fetchpriority="high"
+                    style="width:100%;height:auto;object-fit:cover;aspect-ratio:2200/1467;">
             </picture>
             <p class="caption">Copán Ruins</p>
         </section>
@@ -50,10 +54,10 @@
         <section class="section weather">
             <h2>Weather <span class="desktop-icon" aria-hidden="true">☁️</span></h2>
             <img class="mobile-icon" src="images_temple/weather_icon.svg" alt="Weather icon" width="48" height="48">
-            <p><strong>Temperature:</strong> 28 °C</p>
+            <p><strong>Temperature:</strong> <span id="tempC">28</span> °C</p>
             <p><strong>Conditions:</strong> Sunny</p>
-            <p><strong>Wind:</strong> 10 km/h</p>
-            <p><strong>Wind Chill:</strong> N/A</p>
+            <p><strong>Wind:</strong> <span id="windK">10</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="wc">N/A</span></p>
         </section>
     </main>
 
