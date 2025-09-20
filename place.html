@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover Copán, Honduras — Mayan ruins, culture, and history in Central America.">
+    <title>Honduras • Copán</title>
+    <meta name="description"
+        content="Discover the ancient Mayan ruins of Copán in Honduras, history, culture, and weather information.">
     <meta name="author" content="David Canales">
-    <title>Honduras · Copán</title>
     <link rel="stylesheet" href="styles/place.css">
     <script defer src="scripts/place.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,42 +17,46 @@
 
 <body>
     <header>
-        <h1>Honduras · Copán</h1>
-        <p class="tagline">Mayan Ruins, Culture, and History</p>
+        <h1>Copán Ruins</h1>
     </header>
 
     <main>
-        <section class="hero" aria-labelledby="hero-copan-title">
-            <h2 id="hero-copan-title" class="visually-hidden">Copán Ruins</h2>
+        <section class="hero">
             <picture>
-                <source srcset="images_temple/copan_hn_small.webp" media="(max-width: 600px)" type="image/webp">
-                <source srcset="images_temple/copan_hn.webp" media="(min-width: 601px)" type="image/webp">
-                <img src="images_temple/copan_hn.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1152"
-                    height="768">
+                <source srcset="
+            images_temple/copan_hn_1200.webp 1200w,
+            images_temple/copan_hn_800.webp 800w,
+            images_temple/copan_hn_400.webp 400w
+          " type="image/webp" sizes="(min-width: 900px) 1100px, 100vw">
+                <source srcset="
+            images_temple/copan_hn_1200.jpg 1200w,
+            images_temple/copan_hn_800.jpg 800w,
+            images_temple/copan_hn_400.jpg 400w
+          " sizes="(min-width: 900px) 1100px, 100vw">
+                <img src="images_temple/copan_hn_800.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1200"
+                    height="800" style="width:100%;height:auto;object-fit:cover;aspect-ratio:1200/800;">
             </picture>
             <p class="caption">Copán Ruins</p>
         </section>
 
-        <section class="section" id="data" aria-labelledby="data-title">
-            <h2 id="data-title">Data</h2>
+        <section class="section data">
+            <h2>Data</h2>
             <ul>
-                <li><strong>Area:</strong> 112,492 sq km</li>
-                <li><strong>Population:</strong> ~10 million</li>
+                <li><strong>Area:</strong> 112,492 km²</li>
+                <li><strong>Population:</strong> ~10,278,000</li>
                 <li><strong>Capital:</strong> Tegucigalpa</li>
-                <li><strong>Languages:</strong> Spanish</li>
-                <li><strong>Currency:</strong> Honduran Lempira (HNL)</li>
+                <li><strong>Language:</strong> Spanish</li>
+                <li><strong>Currency:</strong> Lempira (HNL)</li>
                 <li><strong>Time Zone:</strong> UTC -6</li>
                 <li><strong>Calling Code:</strong> +504</li>
                 <li><strong>Internet TLD:</strong> .hn</li>
             </ul>
         </section>
 
-        <section class="section weather" aria-labelledby="weather-title">
-            <h2 id="weather-title">
-                Weather <span class="desktop-icon" aria-hidden="true">☀️</span>
-            </h2>
-            <img class="mobile-icon" src="images_temple/weather_icon.png" alt="Weather icon" width="40" height="40">
-            <p><strong>Temperature:</strong> 28°C</p>
+        <section class="section weather">
+            <h2>Weather <span class="desktop-icon" aria-hidden="true">☁️</span></h2>
+            <img class="mobile-icon" src="images_temple/weather_icon.svg" alt="Weather icon" width="48" height="48">
+            <p><strong>Temperature:</strong> 28 °C</p>
             <p><strong>Conditions:</strong> Sunny</p>
             <p><strong>Wind:</strong> 10 km/h</p>
             <p><strong>Wind Chill:</strong> N/A</p>
@@ -59,7 +64,7 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> |🌴 David Canales 🌴</p>
+        <p>&copy; <span id="year"></span> | 🌴 David Canales 🌴</p>
         <p id="lastModified"></p>
     </footer>
 </body>
