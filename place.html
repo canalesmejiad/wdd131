@@ -23,11 +23,22 @@
     <main>
         <section class="hero">
             <h2>Copán Ruins</h2>
-            <img src="images_temple/copan.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1200" height="800">
+            <picture>
+                <source srcset="images_temple/copan_hn_400.webp 400w,
+                        images_temple/copan_hn_800.webp 800w,
+                        images_temple/copan_hn_1200.webp 1200w" type="image/webp"
+                    sizes="(min-width: 900px) 1100px, 100vw">
+                <source srcset="images_temple/copan_hn_400.jpg 400w,
+                        images_temple/copan_hn_800.jpg 800w,
+                        images_temple/copan_hn_1200.jpg 1200w" type="image/jpeg"
+                    sizes="(min-width: 900px) 1100px, 100vw">
+                <img src="images_temple/copan_hn_800.jpg" alt="Mayan ruins at Copán, Honduras at sunset" width="1200"
+                    height="800">
+            </picture>
             <p>Copán is a renowned Maya archaeological site in western Honduras.</p>
         </section>
 
-        <section class="data">
+        <section class="section data">
             <h2>Data</h2>
             <ul>
                 <li><strong>Area:</strong> 112,492 km²</li>
@@ -41,8 +52,8 @@
             </ul>
         </section>
 
-        <section class="weather">
-            <h2>Weather <span class="desktop-icon" aria-hidden="true">☀️</span></h2>
+        <section class="section weather">
+            <h2>Weather <span class="desktop-icon" aria-hidden="true">☁️</span></h2>
             <img class="mobile-icon" src="images_temple/weather_icon.svg" alt="Weather icon" width="48" height="48">
             <p><strong>Temperature:</strong> 28 °C</p>
             <p><strong>Conditions:</strong> Sunny</p>
