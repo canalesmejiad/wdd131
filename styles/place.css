@@ -6,7 +6,7 @@
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body {
@@ -26,7 +26,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 1.8rem
+    font-size: 1.8rem;
 }
 
 .hero {
@@ -57,7 +57,7 @@ header h1 {
     opacity: .6;
 }
 
-.hero picture img {
+.hero-img {
     width: 100%;
     height: auto;
     display: block;
@@ -67,7 +67,7 @@ header h1 {
 .hero p {
     padding: 1rem;
     margin: 0;
-    color: #444
+    color: #444;
 }
 
 .section {
@@ -98,24 +98,24 @@ header h1 {
 .data ul {
     margin: 0;
     padding: 0;
-    list-style: none
+    list-style: none;
 }
 
 .data li {
-    padding: .35rem 0
+    padding: .35rem 0;
 }
 
 .weather {
-    text-align: center
+    text-align: center;
 }
 
 .weather .desktop-icon {
-    display: none
+    display: none;
 }
 
 .weather .mobile-icon {
     display: inline-block;
-    margin: .5rem 0
+    margin: .5rem 0;
 }
 
 footer {
@@ -129,14 +129,14 @@ footer {
 
 @media (min-width: 768px) {
     .weather {
-        text-align: left
+        text-align: left;
     }
 
     .weather .desktop-icon {
-        display: inline
+        display: inline;
     }
 
     .weather .mobile-icon {
-        display: none
+        display: none;
     }
 }
