@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtered Temples</title>
+    <meta name="description" content="Temples rendered dynamically from a JavaScript array.">
+    <meta name="author" content="David Canales">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">Temple Album</div>
+
+        <button id="menuBtn" class="menu-btn" aria-controls="primaryNav" aria-expanded="false"
+            aria-label="Open menu">☰</button>
+
+        <nav id="primaryNav" class="nav" role="navigation" aria-label="Temple filters">
+            <button id="home" type="button">Home</button>
+            <button id="old" type="button">Old</button>
+            <button id="new" type="button">New</button>
+            <button id="large" type="button">Large</button>
+            <button id="small" type="button">Small</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temples Around the World</h1>
+        <h2 id="view-title">Home</h2>
+        <section id="temple-cards" class="cards" aria-live="polite"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | David Canales | Vancouver, Washington</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

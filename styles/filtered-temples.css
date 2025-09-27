@@ -172,3 +172,72 @@ a:focus-visible {
     outline: 3px solid #ffd166;
     border-radius: 8px;
 }
+
+/* === Temple Cards (estilo ejemplo) === */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Cada tarjeta */
+.cards figure {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    /* borde claro como el ejemplo */
+    border-radius: 12px;
+    padding: 1.25rem 1.25rem 1.5rem;
+    /* espacio interno similar */
+    margin: 0;
+    text-align: left;
+    /* texto alineado; el título irá centrado */
+}
+
+/* Título grande centrado */
+.cards h3 {
+    margin: .25rem 0 1rem;
+    font-size: 2rem;
+    /* grande como la muestra */
+    font-weight: 800;
+    text-align: center;
+    color: var(--ink);
+}
+
+
+.meta {
+    max-width: 36ch;
+    margin: 0 auto 1rem;
+    line-height: 1.35;
+    color: var(--ink);
+}
+
+.meta p {
+    margin: .25rem 0;
+}
+
+
+.meta .label {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: .05em;
+    color: #4b3b72;
+    font-weight: 700;
+    margin-right: .25rem;
+}
+
+
+.cards img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .18);
+    margin-top: .5rem;
+}
+
+
+@media (max-width:420px) {
+    .cards h3 {
+        font-size: 1.7rem;
+    }
+}
