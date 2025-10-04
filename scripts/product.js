@@ -7,9 +7,9 @@ const products = [
 ];
 
 const productSelect = document.getElementById("product");
-products.forEach(product => {
+products.forEach(p => {
     const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
+    option.value = p.id;
+    option.textContent = p.name;
     productSelect.appendChild(option);
 });
