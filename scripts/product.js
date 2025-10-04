@@ -1,7 +1,3 @@
-// ============================================
-// products.js – Dynamic product dropdown
-// ============================================
-
 const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -14,8 +10,8 @@ const productSelect = document.getElementById("product");
 if (productSelect) {
     products.forEach(prod => {
         const option = document.createElement("option");
-        option.value = prod.id;          // id as value
-        option.textContent = prod.name;  // name shown
+        option.value = prod.id;
+        option.textContent = prod.name;
         productSelect.appendChild(option);
     });
 }

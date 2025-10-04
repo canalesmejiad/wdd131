@@ -85,7 +85,6 @@ input[type="submit"]:hover {
     color: #000;
 }
 
-/* Stars rating system */
 .stars {
     display: inline-flex;
     flex-direction: row-reverse;
@@ -110,7 +109,6 @@ input[type="submit"]:hover {
     color: var(--accent);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 1rem;

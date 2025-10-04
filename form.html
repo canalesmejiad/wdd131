@@ -8,9 +8,7 @@
     <meta name="description"
         content="Submit your product review including rating, features, and installation details for WDD 131 Week 05 assignment.">
     <meta name="author" content="David Canales">
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:600" rel="stylesheet">
     <link rel="stylesheet" href="styles/base_week05.css">
     <script src="scripts/product.js" defer></script>
 </head>
@@ -23,7 +21,6 @@
 
     <main>
         <form id="reviewForm" method="get" action="review.html">
-            <!-- Product -->
             <fieldset>
                 <legend>Product Information</legend>
                 <label for="product">Product Name <span class="req">*</span></label>
@@ -32,7 +29,6 @@
                 </select>
             </fieldset>
 
-            <!-- Rating -->
             <fieldset>
                 <legend>Overall Rating <span class="req">*</span></legend>
                 <div class="stars">
@@ -44,14 +40,12 @@
                 </div>
             </fieldset>
 
-            <!-- Installation Date -->
             <fieldset>
                 <legend>Installation</legend>
                 <label for="installDate">Date of Installation <span class="req">*</span></label>
                 <input type="date" id="installDate" name="installDate" required>
             </fieldset>
 
-            <!-- Features -->
             <fieldset>
                 <legend>Useful Features</legend>
                 <div class="checks">
@@ -63,21 +57,18 @@
                 </div>
             </fieldset>
 
-            <!-- Written Review -->
             <fieldset>
                 <legend>Written Review (optional)</legend>
                 <label for="review">Your Review</label>
                 <textarea id="review" name="review" rows="5" placeholder="Write your thoughts here …"></textarea>
             </fieldset>
 
-            <!-- Username -->
             <fieldset>
                 <legend>User Info</legend>
                 <label for="username">Your Name (optional)</label>
                 <input type="text" id="username" name="username" placeholder="e.g. David C.">
             </fieldset>
 
-            <!-- ✅ Corrected submit button -->
             <input type="submit" value="Submit">
         </form>
     </main>
