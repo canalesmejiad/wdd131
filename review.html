@@ -1,3 +1,4 @@
+\
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +10,8 @@
         content="Confirmation page showing the details of your submitted product review for WDD 131 Week 05 assignment.">
     <meta name="author" content="David Canales">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base_week05.css">
     <script src="scripts/forms.js" defer></script>
@@ -41,11 +42,13 @@
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+
         const params = new URLSearchParams(window.location.search);
         const summary = document.getElementById("summary");
         let html = "";
         params.forEach((value, key) => { html += `<li><strong>${key}:</strong> ${value}</li>`; });
         summary.innerHTML = html || "<li>No data found.</li>";
+
         let count = Number(localStorage.getItem("reviewCount")) || 0;
         count++;
         localStorage.setItem("reviewCount", count);
