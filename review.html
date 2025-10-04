@@ -7,8 +7,11 @@
     <meta name="description" content="Product review confirmation page for WDD 131 by David Canales.">
     <meta name="author" content="David Canales">
     <title>Review Confirmation - WDD 131</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
-        rel="stylesheet">
+
+    <!-- Google Fonts (formato clásico, un link por familia) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/base_week05.css">
 </head>
 
@@ -16,14 +19,18 @@
     <header>
         <h1>Thank You for Your Review!</h1>
     </header>
+
     <main>
         <p>Your product review has been successfully submitted.</p>
         <p>Total reviews submitted from this browser: <span id="reviewCount"></span></p>
         <a href="form.html" class="button">Submit Another Review</a>
     </main>
+
     <footer>
         <p>&copy; <span id="year"></span> | Product Reviews | WDD 131 | David Canales</p>
     </footer>
+
+    <!-- Sin defer; al final -->
     <script>
         let count = Number(localStorage.getItem("reviewCount")) || 0;
         count++;
