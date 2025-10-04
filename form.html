@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Product review form for WDD 131 by David Canales. Submit your product feedback and rating.">
+        content="Product review form for WDD 131 by David Canales. Submit your feedback and rating.">
     <meta name="author" content="David Canales">
     <title>Product Review Form - WDD 131</title>
 
-    <!-- Google Fonts (formato clásico, un link por familia) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base_week05.css">
 </head>
@@ -24,13 +22,13 @@
 
     <main>
         <form method="get" action="review.html">
-            <label for="product">Product Name:</label>
+            <label for="product">Product Name <span class="req">*</span></label>
             <select id="product" name="product" required>
                 <option value="" disabled selected>Select a Product ...</option>
             </select>
 
             <fieldset>
-                <legend>Overall Rating</legend>
+                <legend>Overall Rating <span class="req">*</span></legend>
                 <label><input type="radio" name="rating" value="1" required> ☆</label>
                 <label><input type="radio" name="rating" value="2"> ☆☆</label>
                 <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
@@ -38,7 +36,7 @@
                 <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
             </fieldset>
 
-            <label for="installation">Date of Installation:</label>
+            <label for="installation">Date of Installation <span class="req">*</span></label>
             <input type="date" id="installation" name="installation" required>
 
             <fieldset>
@@ -50,13 +48,12 @@
                 <label><input type="checkbox" name="features" value="performance"> Performance</label>
             </fieldset>
 
-            <label for="review">Written Review:</label>
+            <label for="review">Written Review</label>
             <textarea id="review" name="review" rows="4" placeholder="Share your experience..."></textarea>
 
-            <label for="username">User Name:</label>
+            <label for="username">User Name</label>
             <input type="text" id="username" name="username" placeholder="Optional">
 
-            <!-- Submit exacto -->
             <input type="submit" value="Submit">
         </form>
     </main>
@@ -65,7 +62,6 @@
         <p>&copy; <span id="year"></span> | Product Reviews | WDD 131 | David Canales</p>
     </footer>
 
-    <!-- Sin defer; al final del body -->
     <script src="scripts/product.js"></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
