@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Product Review Form for WDD 131 by David Canales" />
-    <meta name="author" content="David Canales" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Form for WDD 131 by David Canales">
+    <meta name="author" content="David Canales">
     <title>Product Review Form - WDD 131</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="styles/base_week05.css" />
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base_week05.css">
 </head>
 
 <body>
@@ -21,47 +21,45 @@
         <section class="card">
             <form method="get" action="review.html">
                 <label for="product">Product Name <span class="req">*</span></label>
-                <select id="product" name="product" required>
+                <select id="product" name="product" required autocomplete="off">
                     <option value="" disabled selected>Choose a Product …</option>
                 </select>
 
                 <fieldset>
                     <legend id="ratingLegend">Overall Rating <span class="req">*</span></legend>
                     <div class="rating-row" role="radiogroup" aria-labelledby="ratingLegend">
-                        <label><input type="radio" name="rating" value="1" aria-label="1 star" required /><span
-                                class="dot" aria-hidden="true"></span><span class="sr">1 star</span></label>
-                        <label><input type="radio" name="rating" value="2" aria-label="2 stars" /><span class="dot"
-                                aria-hidden="true"></span><span class="sr">2 stars</span></label>
-                        <label><input type="radio" name="rating" value="3" aria-label="3 stars" /><span class="dot"
-                                aria-hidden="true"></span><span class="sr">3 stars</span></label>
-                        <label><input type="radio" name="rating" value="4" aria-label="4 stars" /><span class="dot"
-                                aria-hidden="true"></span><span class="sr">4 stars</span></label>
-                        <label><input type="radio" name="rating" value="5" aria-label="5 stars" /><span class="dot"
-                                aria-hidden="true"></span><span class="sr">5 stars</span></label>
+                        <label><input type="radio" name="rating" value="1" aria-label="1 star" required><span
+                                class="dot"></span></label>
+                        <label><input type="radio" name="rating" value="2" aria-label="2 stars"><span
+                                class="dot"></span></label>
+                        <label><input type="radio" name="rating" value="3" aria-label="3 stars"><span
+                                class="dot"></span></label>
+                        <label><input type="radio" name="rating" value="4" aria-label="4 stars"><span
+                                class="dot"></span></label>
+                        <label><input type="radio" name="rating" value="5" aria-label="5 stars"><span
+                                class="dot"></span></label>
                     </div>
                 </fieldset>
 
                 <label for="installation">Date of Installation <span class="req">*</span></label>
-                <input type="date" id="installation" name="installation" required />
+                <input type="date" id="installation" name="installation" required autocomplete="off">
 
                 <fieldset>
                     <legend>Which features did you find useful in the product?</legend>
                     <span class="hint">(Check all that apply)</span>
-                    <label class="check"><input type="checkbox" name="features" value="Durability" />Durability</label>
-                    <label class="check"><input type="checkbox" name="features" value="Ease of Use" />Ease of
-                        Use</label>
-                    <label class="check"><input type="checkbox" name="features"
-                            value="Performance" />Performance</label>
-                    <label class="check"><input type="checkbox" name="features" value="Design" />Design</label>
+                    <label class="check"><input type="checkbox" name="features" value="Durability">Durability</label>
+                    <label class="check"><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
+                    <label class="check"><input type="checkbox" name="features" value="Performance">Performance</label>
+                    <label class="check"><input type="checkbox" name="features" value="Design">Design</label>
                 </fieldset>
 
                 <label for="review">Written Review <span class="optional">(Optional)</span></label>
-                <textarea id="review" name="review" rows="6"></textarea>
+                <textarea id="review" name="review" rows="6" autocomplete="off"></textarea>
 
                 <label for="username">Your Name <span class="optional">(Optional)</span></label>
-                <input type="text" id="username" name="username" />
+                <input type="text" id="username" name="username" autocomplete="name">
 
-                <input type="submit" value="Submit" class="btn-large" />
+                <input type="submit" value="Submit" class="btn-large">
             </form>
         </section>
     </main>
@@ -72,8 +70,10 @@
     </footer>
 
     <script src="scripts/product.js"></script>
-    <script src="scripts/form.js"></script>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="scripts/forms.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
