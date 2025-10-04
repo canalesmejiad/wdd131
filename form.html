@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="wdd131/styles/base_week05.css">
+    <script src="wdd131/scripts/product.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+        <p class="subtitle">WDD 131 – Week 05 Form Activity</p>
+    </header>
+
+    <main>
+        <form id="reviewForm" method="get" action="review.html">
+            <!-- Product -->
+            <fieldset>
+                <legend>Product Information</legend>
+                <label for="product">Product Name <span class="req">*</span></label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product …</option>
+                </select>
+            </fieldset>
+
+            <!-- Rating -->
+            <fieldset>
+                <legend>Overall Rating <span class="req">*</span></legend>
+                <div class="stars">
+                    <input type="radio" id="r5" name="rating" value="5" required><label for="r5">★</label>
+                    <input type="radio" id="r4" name="rating" value="4"><label for="r4">★</label>
+                    <input type="radio" id="r3" name="rating" value="3"><label for="r3">★</label>
+                    <input type="radio" id="r2" name="rating" value="2"><label for="r2">★</label>
+                    <input type="radio" id="r1" name="rating" value="1"><label for="r1">★</label>
+                </div>
+            </fieldset>
+
+            <!-- Installation Date -->
+            <fieldset>
+                <legend>Installation</legend>
+                <label for="installDate">Date of Installation <span class="req">*</span></label>
+                <input type="date" id="installDate" name="installDate" required>
+            </fieldset>
+
+            <!-- Features -->
+            <fieldset>
+                <legend>Useful Features</legend>
+                <div class="checks">
+                    <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+                    <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+                    <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="Design"> Design</label>
+                    <label><input type="checkbox" name="features" value="Value"> Value</label>
+                </div>
+            </fieldset>
+
+            <!-- Written Review -->
+            <fieldset>
+                <legend>Written Review (optional)</legend>
+                <label for="review">Your Review</label>
+                <textarea id="review" name="review" rows="5" placeholder="Write your thoughts here …"></textarea>
+            </fieldset>
+
+            <!-- Username -->
+            <fieldset>
+                <legend>User Info</legend>
+                <label for="username">Your Name (optional)</label>
+                <input type="text" id="username" name="username" placeholder="e.g. David C.">
+            </fieldset>
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> WDD 131 | Product Review Form</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
