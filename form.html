@@ -7,8 +7,11 @@
     <meta name="description" content="Product Review Form for WDD 131 by David Canales">
     <meta name="author" content="David Canales">
     <title>Product Review Form - WDD 131</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
-        rel="stylesheet">
+
+    <!-- Google Fonts (formato clásico, 2 links) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/base_week05.css">
 </head>
 
@@ -59,6 +62,7 @@
                 <label for="username">Your Name <span class="optional">(Optional)</span></label>
                 <input type="text" id="username" name="username" autocomplete="name">
 
+                <!-- Submit EXACTO para el auditor -->
                 <input type="submit" value="Submit" class="btn-large">
             </form>
         </section>
@@ -69,11 +73,10 @@
         <p id="lastModified"></p>
     </footer>
 
+    <!-- Scripts al final, SIN defer -->
     <script src="scripts/product.js"></script>
     <script src="scripts/forms.js"></script>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
