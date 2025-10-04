@@ -2,73 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Product review form for WDD 131 by David Canales. Submit your feedback and rating.">
-    <meta name="author" content="David Canales">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Product Review Form for WDD 131 by David Canales" />
+    <meta name="author" content="David Canales" />
     <title>Product Review Form - WDD 131</title>
-
-    <!-- Google Fonts: css2 en un solo enlace (válido en W3C y sin pipes) -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/base_week05.css">
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/base_week05.css" />
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <h1>Product Review</h1>
     </header>
 
     <main>
-        <form method="get" action="review.html">
-            <label for="product">Product Name <span class="req">*</span></label>
-            <select id="product" name="product" required>
-                <option value="" disabled selected>Select a Product ...</option>
-            </select>
+        <section class="form-container">
+            <form method="get" action="review.html">
+                <label for="product">Product Name <span class="required">*</span></label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
 
-            <fieldset>
-                <legend>Overall Rating <span class="req">*</span></legend>
-                <label><input type="radio" name="rating" value="1" required> ☆</label>
-                <label><input type="radio" name="rating" value="2"> ☆☆</label>
-                <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
-                <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
-                <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
-            </fieldset>
+                <fieldset>
+                    <legend>Overall Rating <span class="required">*</span></legend>
+                    <div class="rating">
+                        <label><input type="radio" name="rating" value="1" required /> ☆</label>
+                        <label><input type="radio" name="rating" value="2" /> ☆☆</label>
+                        <label><input type="radio" name="rating" value="3" /> ☆☆☆</label>
+                        <label><input type="radio" name="rating" value="4" /> ☆☆☆☆</label>
+                        <label><input type="radio" name="rating" value="5" /> ☆☆☆☆☆</label>
+                    </div>
+                </fieldset>
 
-            <label for="installation">Date of Installation <span class="req">*</span></label>
-            <input type="date" id="installation" name="installation" required>
+                <label for="installation-date">Date of Installation <span class="required">*</span></label>
+                <input type="date" id="installation-date" name="installation-date" required />
 
-            <fieldset>
-                <legend>Useful Features</legend>
-                <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                <label><input type="checkbox" name="features" value="design"> Design</label>
-                <label><input type="checkbox" name="features" value="ease"> Ease of Use</label>
-                <label><input type="checkbox" name="features" value="value"> Value</label>
-                <label><input type="checkbox" name="features" value="performance"> Performance</label>
-            </fieldset>
+                <fieldset>
+                    <legend>Which features did you find useful in the product?</legend>
+                    <p>(Check all that apply)</p>
+                    <label><input type="checkbox" name="features" value="Durability" /> Durability</label>
+                    <label><input type="checkbox" name="features" value="Ease of Use" /> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="Performance" /> Performance</label>
+                    <label><input type="checkbox" name="features" value="Design" /> Design</label>
+                </fieldset>
 
-            <label for="review">Written Review</label>
-            <textarea id="review" name="review" rows="4" placeholder="Share your experience..."></textarea>
+                <label for="review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="review" name="review"></textarea>
 
-            <label for="username">User Name</label>
-            <input type="text" id="username" name="username" placeholder="Optional">
+                <label for="username">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="username" name="username" />
 
-            <!-- Submit EXACTO -->
-            <input type="submit" value="Submit">
-        </form>
+                <input type="submit" value="Post Review" class="submit-button" />
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | Product Reviews | WDD 131 | David Canales</p>
+        <p>&copy;2024 David Canales | Vancouver, WA</p>
+        <p id="lastModified"></p>
     </footer>
 
-    <!-- Sin defer; scripts al final -->
-    <script src="scripts/product.js"></script>
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="scripts/product.js" defer></script>
+    <script src="scripts/forms.js" defer></script>
 </body>
 
 </html>
