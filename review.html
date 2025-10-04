@@ -1,58 +1,35 @@
-\
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 | Review Confirmation - David Canales</title>
-    <meta name="description"
-        content="Confirmation page showing the details of your submitted product review for WDD 131 Week 05 assignment.">
+    <meta name="description" content="Product review confirmation page for WDD 131 by David Canales.">
     <meta name="author" content="David Canales">
-
+    <title>Review Confirmation - WDD 131</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="styles/base_week05.css">
-    <script src="scripts/forms.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Thank You!</h1>
-        <p>Your review has been submitted successfully.</p>
+        <h1>Thank You for Your Review!</h1>
     </header>
-
     <main>
-        <section class="card">
-            <h2>Review Summary</h2>
-            <ul id="summary"></ul>
-
-            <p class="counter">
-                Total Reviews Submitted: <span id="reviewCount">0</span>
-            </p>
-
-            <p><a href="form.html">← Submit another review</a></p>
-        </section>
+        <p>Your product review has been successfully submitted.</p>
+        <p>Total reviews submitted from this browser: <span id="reviewCount"></span></p>
+        <a href="form.html" class="button">Submit Another Review</a>
     </main>
-
     <footer>
-        <p>&copy; <span id="year"></span> WDD 131 | Review Confirmation</p>
+        <p>&copy; <span id="year"></span> | Product Reviews | WDD 131 | David Canales</p>
     </footer>
-
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-
-        const params = new URLSearchParams(window.location.search);
-        const summary = document.getElementById("summary");
-        let html = "";
-        params.forEach((value, key) => { html += `<li><strong>${key}:</strong> ${value}</li>`; });
-        summary.innerHTML = html || "<li>No data found.</li>";
-
         let count = Number(localStorage.getItem("reviewCount")) || 0;
         count++;
         localStorage.setItem("reviewCount", count);
         document.getElementById("reviewCount").textContent = count;
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 
