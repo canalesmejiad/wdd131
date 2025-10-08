@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Discover Honduras: culture, food, and stunning places to visit." />
+    <meta name="author" content="David Canales" />
+    <title>Discover Honduras | Home</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/base.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <h1>Discover Honduras</h1>
+        </div>
+
+        <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false"
+            aria-controls="primaryNav">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <nav id="primaryNav" class="nav" role="navigation" aria-label="Primary">
+            <a href="index.html" class="active">Home</a>
+            <a href="culture.html">Culture</a>
+            <a href="food.html">Food</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <h2>A Paradise in the Heart of Central America</h2>
+            <p>Explore natural beauty, warm hospitality, and vibrant traditions that make Honduras unique.</p>
+            <a href="culture.html" class="btn">Learn more</a>
+        </section>
+
+        <section class="cards">
+            <article class="card">
+                <img src="images/roatan.jpg" alt="White-sand beach in Roatán" loading="lazy" />
+                <h3>Incredible Beaches</h3>
+                <p>Roatán, Utila, and Tela offer crystal-clear waters, soft sand, and world-class diving.</p>
+            </article>
+
+            <article class="card">
+                <img src="images/copan.jpg" alt="Ancient Mayan ruins at Copán" loading="lazy" />
+                <h3>Mayan History</h3>
+                <p>Walk through majestic Mayan ruins at Copán, a UNESCO World Heritage site.</p>
+            </article>
+
+            <article class="card">
+                <img src="images/food.jpg" alt="Traditional Honduran food on a table" loading="lazy" />
+                <h3>Authentic Flavors</h3>
+                <p>Try baleadas, tamales, and rich Honduran coffee from the highlands.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Discover Honduras • David Canales</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
