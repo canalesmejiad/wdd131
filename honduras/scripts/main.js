@@ -13,4 +13,3 @@ if (navToggle && primaryNav) {
     });
 }
 
-// (Native lazy loading is already applied via loading="lazy" on images)
