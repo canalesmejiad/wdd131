@@ -17,6 +17,7 @@ body {
     background: var(--bg)
 }
 
+
 .g-header {
     position: sticky;
     top: 0;
@@ -41,6 +42,7 @@ body {
     font-weight: 700
 }
 
+
 .g-container {
     width: min(1100px, 92%);
     margin: 18px auto
@@ -51,15 +53,35 @@ body {
     column-gap: 16px
 }
 
-.grid img {
-    width: 100%;
+
+figure {
+    break-inside: avoid;
     margin: 0 0 16px;
+    background: var(--surface);
     border-radius: 12px;
     box-shadow: var(--shadow);
+    overflow: hidden
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #f0f0f0;
     background: #eaecef;
     min-height: 180px;
     object-fit: cover
 }
+
+figcaption {
+    padding: .5rem .75rem;
+    font-size: .95rem;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    font-weight: 600
+}
+
 
 @media (min-width:700px) {
     .grid {
