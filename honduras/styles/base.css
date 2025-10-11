@@ -1,4 +1,4 @@
-\:root {
+:root {
     --primary: #0d4ea6;
     --accent: #00b3a4;
     --text: #222;
@@ -135,31 +135,25 @@ main {
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-}
-
-.cards .card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
     transition: transform .15s ease, box-shadow .15s ease;
 }
 
-.cards .card:hover,
-.cards .card:focus-visible {
+.card:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, .12);
 }
 
-.cards .card:focus-visible {
-    outline: 3px solid var(--accent);
-    outline-offset: 4px;
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.03);
 }
 
 .food-item {
@@ -186,6 +180,11 @@ main {
     object-fit: cover;
     border-radius: 10px;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.food-item img:hover {
+    transform: scale(1.04);
 }
 
 .food-item h3 {
@@ -200,6 +199,16 @@ main {
     line-height: 1.4;
 }
 
+.site-footer {
+    text-align: center;
+    background: var(--primary);
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 @media (max-width: 680px) {
     .food-item {
         grid-template-columns: 1fr;
@@ -210,14 +219,6 @@ main {
         height: 200px;
         width: 100%;
     }
-}
-
-.site-footer {
-    text-align: center;
-    background: var(--primary);
-    color: #fff;
-    padding: 1rem;
-    margin-top: 2rem;
 }
 
 @media (max-width: 780px) {
