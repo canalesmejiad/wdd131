@@ -2,26 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Discover Honduras — explore stunning beaches, Mayan ruins, and authentic cuisine from the heart of Central America." />
-    <meta name="author" content="David Canales" />
-    <meta name="theme-color" content="#0d4ea6" />
+        content="Discover Honduras — explore stunning beaches, Mayan ruins, and authentic cuisine from the heart of Central America.">
+    <meta name="author" content="David Canales">
+    <meta name="theme-color" content="#0d4ea6">
 
-    <meta property="og:title" content="Discover Honduras" />
-    <meta property="og:description" content="Explore beaches, Mayan ruins, and the rich flavors of Honduran culture." />
+    <meta property="og:title" content="Discover Honduras">
+    <meta property="og:description" content="Explore beaches, Mayan ruins, and the rich flavors of Honduran culture.">
     <meta property="og:image"
-        content="https://upload.wikimedia.org/wikipedia/commons/1/15/West_Bay_Beach_-Roatan_-Honduras-23May2009-d.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
+        content="https://upload.wikimedia.org/wikipedia/commons/1/15/West_Bay_Beach_-Roatan_-Honduras-23May2009-d.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
 
     <title>Discover Honduras | Home</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="styles/base.css" />
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
             <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
 
-        <nav id="primaryNav" class="nav" role="navigation" aria-label="Primary">
+        <nav id="primaryNav" class="nav" aria-label="Primary">
             <a href="index.html" class="active">Home</a>
             <a href="culture.html">Culture</a>
             <a href="food.html">Food</a>
@@ -55,21 +56,21 @@
         <section class="cards">
             <a href="beaches.html" class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/West_Bay_Beach_-Roatan_-Honduras-23May2009-d.jpg"
-                    alt="White-sand beach in Roatán" width="400" height="250" loading="lazy" />
+                    alt="White-sand beach in Roatán" width="400" height="250" loading="lazy" decoding="async">
                 <h3>Incredible Beaches</h3>
                 <p>Roatán, Utila, and Tela offer crystal-clear waters, soft sand, and world-class diving.</p>
             </a>
 
             <a href="mayan.html" class="card">
                 <img src="https://cdn.audleytravel.com/1080/771/79/15979272-pyramid-copn-honduras.webp"
-                    alt="Ancient Mayan ruins at Copán" width="400" height="250" loading="lazy" />
+                    alt="Ancient Mayan ruins at Copán" width="400" height="250" loading="lazy" decoding="async">
                 <h3>Mayan History</h3>
                 <p>Walk through majestic Mayan ruins at Copán, a UNESCO World Heritage site.</p>
             </a>
 
             <a href="flavors.html" class="card">
                 <img src="https://www.knoxmercury.com/wp-content/uploads/2016/01/FOOD_0107_SaborCatracho1-793x529.jpg"
-                    alt="Traditional Honduran food on a table" width="400" height="250" loading="lazy" />
+                    alt="Traditional Honduran food on a table" width="400" height="250" loading="lazy" decoding="async">
                 <h3>Authentic Flavors</h3>
                 <p>Try baleadas, tamales, and rich Honduran coffee from the highlands.</p>
             </a>
@@ -83,12 +84,12 @@
     </footer>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-        const navToggle = document.getElementById("navToggle");
-        const nav = document.getElementById("primaryNav");
-        navToggle.addEventListener("click", () => {
-            nav.classList.toggle("open");
-            navToggle.setAttribute("aria-expanded", nav.classList.contains("open"));
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navToggle = document.getElementById('navToggle');
+        const nav = document.getElementById('primaryNav');
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', nav.classList.contains('open'));
         });
     </script>
 </body>
