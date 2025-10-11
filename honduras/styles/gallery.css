@@ -1,0 +1,74 @@
+:root {
+    --text: #222;
+    --bg: #f4f4f4;
+    --surface: #ffffff;
+    --primary: #0d4ea6;
+    --shadow: 0 8px 24px rgba(0, 0, 0, .08)
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, Segoe UI, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg)
+}
+
+.g-header {
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    padding: 14px 16px
+}
+
+.g-header h1 {
+    margin: .2rem 0 0;
+    font-size: 1.6rem
+}
+
+.g-header p {
+    margin: .1rem 0 .2rem;
+    color: #5b6470
+}
+
+.back {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700
+}
+
+.g-container {
+    width: min(1100px, 92%);
+    margin: 18px auto
+}
+
+.grid {
+    columns: 1;
+    column-gap: 16px
+}
+
+.grid img {
+    width: 100%;
+    margin: 0 0 16px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    background: #eaecef;
+    min-height: 180px;
+    object-fit: cover
+}
+
+@media (min-width:700px) {
+    .grid {
+        columns: 2
+    }
+}
+
+@media (min-width:1100px) {
+    .grid {
+        columns: 3
+    }
+}
