@@ -8,7 +8,7 @@
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 .g-header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: .3rem;
 }
 
 .g-header p {
@@ -43,9 +43,8 @@ body {
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     font-weight: 600;
-    transition: color 0.2s ease;
 }
 
 .back:hover {
@@ -68,19 +67,20 @@ figure {
     background: var(--surface);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    transition: transform .15s ease, box-shadow .15s ease;
     margin: 0;
 }
 
 figure:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
 }
 
 figure img {
     width: 100%;
-    height: 220px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     display: block;
 }
@@ -89,11 +89,10 @@ figcaption {
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
-    padding: 0.75rem;
+    padding: .75rem;
     color: var(--text);
     background: #fff;
 }
-
 
 .site-footer {
     text-align: center;
@@ -114,11 +113,7 @@ figcaption {
         gap: 1rem;
     }
 
-    figure img {
-        height: 200px;
-    }
-
     figcaption {
-        font-size: 0.95rem;
+        font-size: .95rem;
     }
 }
