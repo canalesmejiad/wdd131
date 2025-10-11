@@ -4,9 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Discover Honduras: culture, food, and stunning places to visit." />
+    <meta name="description"
+        content="Discover Honduras — explore stunning beaches, Mayan ruins, and authentic cuisine from the heart of Central America." />
     <meta name="author" content="David Canales" />
+    <meta name="theme-color" content="#0d4ea6" />
+
+    <meta property="og:title" content="Discover Honduras" />
+    <meta property="og:description" content="Explore beaches, Mayan ruins, and the rich flavors of Honduran culture." />
+    <meta property="og:image"
+        content="https://upload.wikimedia.org/wikipedia/commons/1/15/West_Bay_Beach_-Roatan_-Honduras-23May2009-d.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
     <title>Discover Honduras | Home</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap"
         rel="stylesheet" />
@@ -42,23 +53,23 @@
         </section>
 
         <section class="cards">
-            <a class="card" href="beaches.html">
+            <a href="beaches.html" class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/West_Bay_Beach_-Roatan_-Honduras-23May2009-d.jpg"
-                    alt="White-sand beach in Roatán" loading="lazy" />
+                    alt="White-sand beach in Roatán" width="400" height="250" loading="lazy" />
                 <h3>Incredible Beaches</h3>
                 <p>Roatán, Utila, and Tela offer crystal-clear waters, soft sand, and world-class diving.</p>
             </a>
 
-            <a class="card" href="mayan.html">
+            <a href="mayan.html" class="card">
                 <img src="https://cdn.audleytravel.com/1080/771/79/15979272-pyramid-copn-honduras.webp"
-                    alt="Ancient Mayan ruins at Copán" loading="lazy" />
+                    alt="Ancient Mayan ruins at Copán" width="400" height="250" loading="lazy" />
                 <h3>Mayan History</h3>
                 <p>Walk through majestic Mayan ruins at Copán, a UNESCO World Heritage site.</p>
             </a>
 
-            <a class="card" href="flavors.html">
+            <a href="flavors.html" class="card">
                 <img src="https://www.knoxmercury.com/wp-content/uploads/2016/01/FOOD_0107_SaborCatracho1-793x529.jpg"
-                    alt="Traditional Honduran food on a table" loading="lazy" />
+                    alt="Traditional Honduran food on a table" width="400" height="250" loading="lazy" />
                 <h3>Authentic Flavors</h3>
                 <p>Try baleadas, tamales, and rich Honduran coffee from the highlands.</p>
             </a>
@@ -67,9 +78,19 @@
 
     <footer class="site-footer">
         <p>&copy; <span id="year"></span> Discover Honduras • David Canales</p>
+        <p><a href="https://en.wikipedia.org/wiki/Honduras" target="_blank" rel="noopener noreferrer"
+                style="color:#fff; text-decoration:underline;">Learn more about Honduras</a></p>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const navToggle = document.getElementById("navToggle");
+        const nav = document.getElementById("primaryNav");
+        navToggle.addEventListener("click", () => {
+            nav.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", nav.classList.contains("open"));
+        });
+    </script>
 </body>
 
 </html>
